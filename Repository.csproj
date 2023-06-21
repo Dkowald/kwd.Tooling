@@ -1,0 +1,27 @@
+﻿<!--
+A Traversal (CI Build) project:
+Used to describe a set of projects to build in CI.
+
+Also used to include various non-project files that are part of the solution.
+Add this to your solution (.sln) to avoid manually adding items to 'Solution Folder'-->
+<!--See https://github.com/microsoft/MSBuildSdks for details on this, 
+and other types of SDK project-->
+<Project Sdk="Microsoft.Build.Traversal/4.1.0">
+  
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+    <!--Additional repository files-->
+	<ItemGroup>
+		<None Include="*" Exclude="Repository.csproj"/>
+    <None Include=".github/**" />
+    <None Include="**/.vscode/**" />
+	</ItemGroup>
+
+    <!--Projects to be built-->
+	<ItemGroup>
+        <ProjectReference Include="src/*/*.csproj " />
+	</ItemGroup>
+	
+</Project>
