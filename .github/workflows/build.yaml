@@ -1,6 +1,6 @@
 #default: 
 # restore --> build --> test --> pack
-#For update master || development
+#For update main || development
 # + nuget-publish (-beta for development)
 #If wip/**
 # do nothing
@@ -75,7 +75,7 @@ jobs:
         
   publish:
     name: Publish to github packages
-    if: github.ref == 'refs/heads/development' || github.ref == 'refs/heads/master'
+    if: github.ref == 'refs/heads/development' || github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
     permissions:
