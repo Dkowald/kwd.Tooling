@@ -84,7 +84,7 @@ jobs:
      - uses: actions/download-artifact@v3
        with:
         name: package
-        path: bin/
+        path: kwd.Tooling/bin/
 
      - name: Prep github push source
        run: > 
