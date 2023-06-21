@@ -94,6 +94,9 @@ jobs:
          --store-password-in-clear-text 
          --name github "https://nuget.pkg.github.com/dkowald/index.json"
        
+     - name: diag-ls
+       run: pwd;ls -l ./bin
+
      - name: Push package to github
-       run: dotnet nuget push "./kwd.Tooling/bin/*.*pkg" --source "github"      
+       run: dotnet nuget push bin/*.*pkg --source "github"      
    
