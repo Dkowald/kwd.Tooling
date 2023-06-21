@@ -12,7 +12,7 @@ on:
     branches-ignore: ["wip/**"]
 
 env:
-  SLN: src/Repository.csproj
+  SLN: Repository.csproj
 
 jobs:
   build:
