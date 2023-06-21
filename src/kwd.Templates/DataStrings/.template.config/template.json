@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Derek Kowald",
+  "classifications": ["kwd", "C# Pattern" ],
+  "identity": "kwd.Templates.DataStrings",
+  "name": "DataString type",
+  "shortName": "datastring",
+  "sourceName": "SampleDataString",
+
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "constraints": {
+    "csharp-only": {
+      "type": "project-capability",
+      "args": "CSharp"
+    }
+  },
+  "symbols": {
+    "Namespace": {
+      "type": "bind",
+      "binding": "msbuild:RootNamespace",
+      "replaces": "kwd.Templates.DataStrings"
+    }
+  },
+  "postActions": [
+    {
+      "description": "Add nuget package",
+      "actionId": "AC1156F7-BB77-4DB8-B28F-24EEBCCA1E5C",
+      "manualInstructions": [ { "text": "Add reference to kwd.CoreUtil if missing" } ],
+      "args": {"executable": "dotnet add package kwd.CoreUtil"}
+    }
+  ]
+}
