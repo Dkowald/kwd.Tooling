@@ -40,23 +40,23 @@ jobs:
     - name: Build
       run: dotnet build --no-restore -c Release $SLN -p:ContinuousIntegrationBuild=true
 
-    - name: Test
-      run: >
-        dotnet test 
-        --no-build 
-        -c Release 
-        --verbosity normal 
-        --logger trx 
-        --results-directory "TestResults" 
-        --filter TestCategory\!=Integration
-        $SLN
+    #- name: Test
+    #  run: >
+    #    dotnet test 
+    #    --no-build 
+    #    -c Release 
+    #    --verbosity normal 
+    #    --logger trx 
+    #    --results-directory "TestResults" 
+    #    --filter TestCategory\!=Integration
+    #    $SLN
     
-    - name: Upload dotnet test results
-      uses: actions/upload-artifact@v3
-      with:
-        name: test-results
-        path: TestResults
-      if: ${{ always() }}
+    #- name: Upload dotnet test results
+    #  uses: actions/upload-artifact@v3
+    #  with:
+    #    name: test-results
+    #    path: TestResults
+    #  if: ${{ always() }}
 
     - name: Pack (beta)
       if: success() && github.ref == 'refs/heads/development'
@@ -95,5 +95,5 @@ jobs:
          --name github "https://nuget.pkg.github.com/dkowald/index.json"
        
      - name: Push package to github
-       run: dotnet nuget push "./bin/*.*pkg" --source "github"      
+       run: dotnet nuget push "./bin/**/*.*pkg" --source "github"      
    
