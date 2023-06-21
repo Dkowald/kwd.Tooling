@@ -3,6 +3,17 @@ Various .NET Core templates to assist development.
 These as specialized to my own needs, so may not have general usage.  
 But they can be used as further dotnet new template examples.
 
+## Install
+
+```console
+dotnet new install kwd.Templates
+```
+Alternatly, pull the repo and update / install the as desired e.g:
+```console
+git clone https://github.com/Dkowald/kwd.Tooling.git ./kwd.Tools
+dotnet new install ./kwd.Tools/src/kwd.Templates/DataStrings
+```
+
 ## DataStrings
 A C# type to replace a raw string.  
 Useful as a typesafe drop-in to replace string arguments.  
