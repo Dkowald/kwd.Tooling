@@ -116,7 +116,7 @@ jobs:
     - name: Clone wiki
       uses: actions/checkout@v3
       with:
-       repository: '${{GITHUB_REPOSITORY}}.wiki.git'
+       repository: '${{github.repository}}.wiki.git'
        ref: 'master'
        path: 'w'
 
