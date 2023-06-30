@@ -14,11 +14,9 @@ and other types of SDK project-->
 
     <!--Additional repository files-->
 	<ItemGroup>
-		<None Include="*" Exclude="Repository.csproj"/>
-    <None Include=".github/**" />
-    <None Include="**/.vscode/**" />
-    <None Include="wiki/**/*" />
-	</ItemGroup>
+    <None Include="**/*" Exclude="Repository.csproj;src/**/*" />
+    <None Remove="bin/**/*;obj/**/*;.vs/**/*" />
+  </ItemGroup>
 
     <!--Projects to be built-->
 	<ItemGroup>
