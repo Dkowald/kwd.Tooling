@@ -6,6 +6,10 @@
 # Tag must start with v
 # Only works on selected branches
 #
+# Requires:
+#
+# secrets.NUGETPUSH - to nuget PAT
+#
 
 name: release via tag
 
@@ -94,12 +98,12 @@ jobs:
         path: packages/
         if-no-files-found: error
         
-    - name: Push package to github
-      run: > 
-        dotnet nuget push 
-        packages/*.nupkg 
-        --source https://nuget.pkg.github.com/dkowald/index.json
-        --api-key ${{ secrets.GITHUB_TOKEN }}
+    #- name: Push package to github
+    #  run: > 
+    #    dotnet nuget push 
+    #    packages/*.nupkg 
+    #    --source https://nuget.pkg.github.com/dkowald/index.json
+    #    --api-key ${{ secrets.GITHUB_TOKEN }}
         
     - name: Nuget publish
       run: >
