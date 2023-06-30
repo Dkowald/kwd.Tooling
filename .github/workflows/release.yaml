@@ -125,7 +125,7 @@ jobs:
       run: |
        cd w
        git add -A
-       git commit -m "release ${{needs.check.outputs.build_version}}"
+       git commit --allow-empty -m "release ${{needs.check.outputs.build_version}}"
        git push
     
     - name: Create release
