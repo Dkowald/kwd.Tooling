@@ -9,7 +9,7 @@ on:
   pull_request:
     types: [opened, reopened]
     branches:
-      - master
+      - main
       - development
 
 env:

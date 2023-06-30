@@ -19,7 +19,7 @@ on:
       - "v*"
 env:
   PackTarget: src/kwd.Templates
-  PackBranches: "master,build,development"
+  PackBranches: "main,build,development"
 
 jobs:
   check:
