@@ -98,14 +98,7 @@ jobs:
         name: package
         path: packages/
         if-no-files-found: error
-
-    - name: Push package to github
-      run: > 
-        dotnet nuget push 
-        packages/*.nupkg 
-        --source https://nuget.pkg.github.com/dkowald/index.json
-        --api-key ${{ secrets.GITHUB_TOKEN }}        
-
+    
     - name: Nuget publish
       run: >
         dotnet nuget push
