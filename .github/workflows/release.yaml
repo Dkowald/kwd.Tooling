@@ -85,10 +85,8 @@ jobs:
       run: >
         dotnet pack 
         -c Release 
-        --include-symbols
         -p:ContinuousIntegrationBuild=true 
         -p PackageVersion=${{needs.check.outputs.build_version}}
-        -p SymbolPackageFormat=snupkg
         -o packages
         ${{env.PackTarget}}
     
