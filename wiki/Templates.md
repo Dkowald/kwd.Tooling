@@ -4,10 +4,12 @@ A small collection of some dotnet new templates.
 
 ## Install
 
+Via [nuget](https://www.nuget.org/packages/kwd.Templates/):  
 ```console
 dotnet new install kwd.Templates
 ```
-Alternatly; pull the repo and update / install them as desired e.g:
+
+Via Clone: 
 ```console
 git clone https://github.com/Dkowald/kwd.Tooling.git ./kwd.Tools
 dotnet new install ./kwd.Tools/src/kwd.Templates/DataStrings
