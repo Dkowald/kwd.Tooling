@@ -17,6 +17,7 @@ and other types of SDK project-->
 		<None Include="*" Exclude="Repository.csproj"/>
     <None Include=".github/**" />
     <None Include="**/.vscode/**" />
+    <None Include="wiki/**/*" />
 	</ItemGroup>
 
     <!--Projects to be built-->

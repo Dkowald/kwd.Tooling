@@ -1,41 +1,27 @@
 # Overview
 Various .NET Core templates to assist development.  
 These as specialized to my own needs, so may not have general usage.  
-But they can be used as further dotnet new template examples.
 
-## Install
+They can be used as-is; or as further dotnet new template examples.
 
-```console
-dotnet new install kwd.Templates
-```
-Alternatly, pull the repo and update / install the as desired e.g:
-```console
-git clone https://github.com/Dkowald/kwd.Tooling.git ./kwd.Tools
-dotnet new install ./kwd.Tools/src/kwd.Templates/DataStrings
-```
+See [wiki](https://github.com/Dkowald/kwd.Tooling/wiki) for more details
 
-## DataStrings
-A C# type to replace a raw string.  
-Useful as a typesafe drop-in to replace string arguments.  
-Uses the pattern from [kwd.CoreUtil](https://github.com/Dkowald/kwd.CoreUtil).
-```console
-dotnet new datastring
-```
-## Markdown
-A starter Markdown (md)  
-Defaults to Readme.md  
-Includes cheet-sheet and links for quick reference.
-```console
-dotnet new md
-```
-## CIBuild
-A CI build / Traversal project
-useful for
-- Replacing the use of 'Soulution Folder'
-- Explicitly defining build projects for Continuous Intergration (CI).
-```console
-dotnet new cibuild
-```
+## Included templates:
+
+
+- A markdown file; contains some starter help and links for reference
+> dotnet new __md__
+
+- Create a DataString class, useful to provide a type-safe alternate to a raw string  
+  see [kwd.CorUtil](https://github.com/Dkowald/kwd.CoreUtil)
+> dotnet new __datastring__
+
+- A SDK Traversal project.  
+ Usefull as a build project; though I mostly use it to avoid solution folders in visual studio.
+> dotnet new __cibuild__
+
+
+
 -----
 ^ [source](https://github.com/Dkowald/kwd.Tooling) / [nuget](https://www.nuget.org/packages/kwd.Templates)
 
