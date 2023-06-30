@@ -11,6 +11,6 @@ Current Features:
 
 A set of various dotnet new templates
 
-Quick Start:
+See [[Templates|Templates]]  
 
-[Nuget](https://www.nuget.org/packages/kwd.CoreUtil)
+^ [Nuget](https://www.nuget.org/packages/kwd.CoreUtil)
