@@ -6,16 +6,36 @@ A small collection of some dotnet new templates.
 
 Via [nuget](https://www.nuget.org/packages/kwd.Templates/):  
 ```console
+#Install all 
 dotnet new install kwd.Templates
 ```
 
 Via Clone: 
-```console
+```pwsh
 git clone https://github.com/Dkowald/kwd.Tooling.git ./kwd.Tools
+
+# Install just the templates you want.
 dotnet new install ./kwd.Tools/src/kwd.Templates/DataStrings
 ```
 
 ## Templates
+
+### FluxPart
+Adds a razor component that uses fluxor, 
+including backing .cs and .css files.
+
+```pwsh
+dotnet new FluxPart -n SampleComponent
+```
+
+
+### RazorPart
+Adds a razor component, including its 
+backing .cs and .css files.
+
+```pwsh
+dotnet new RazorPart -n SampleRazorComponent
+```
 
 ### DataStrings
 A C# type to replace a raw string.  

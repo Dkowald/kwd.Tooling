@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Derek Kowald",
+  "classifications": [ "kwd", "Razor", "Fluxor" ],
+  "identity": "kwd.Templates.FluxPart",
+  "name": "Razor Fluxor Part",
+  "shortName": "fluxpart",
+  "sourceName": "SampleComponent",
+
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "constraints": {
+    "csharp-only": {
+      "type": "project-capability",
+      "args": "CSharp"
+    }
+  },
+  "symbols": {
+    "Namespace": {
+      "type": "bind",
+      "binding": "msbuild:RootNamespace",
+      "replaces": "kwd.Templates.FluxPart"
+    }
+  }
+}

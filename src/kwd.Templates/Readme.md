@@ -8,6 +8,10 @@ See [wiki](https://github.com/Dkowald/kwd.Tooling/wiki) for more details
 
 ## Included templates:
 
+- Create a razor component, or razor-fluxor component,  
+    including backing cs and css files
+> dotnet new __razorpart__  
+> dotnet new __fluxpart__
 
 - A markdown file; contains some starter help and links for reference
 > dotnet new __md__

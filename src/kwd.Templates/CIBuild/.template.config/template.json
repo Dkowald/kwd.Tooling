@@ -1,7 +1,7 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "Derek Kowald",
-  "classifications": [ "Project", "Traversal" ],
+  "classifications": ["kwd", "Project", "Traversal" ],
   "identity": "kwd.Templates.CIBuild",
   "name": "CI Build Project",
   "shortName": "cibuild",
