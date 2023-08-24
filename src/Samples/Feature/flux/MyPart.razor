@@ -1,0 +1,17 @@
+<div class='sample-component'>
+</div>
+
+@using Fluxor
+@inject IState<Store.MyPartState> SampleState
+@inject IDispatcher Dispatcher
+@inherits Fluxor.Blazor.Web.Components.FluxorComponent
+@code {
+  private Store.MyPartState State => SampleState.Value;
+  private void Dispatch<T>(T action) => Dispatcher.Dispatch(action);
+
+  //private string ViewData => State.ViewData;
+
+  private void OnClick() {
+    //Dispatch(new MyClickAction());
+  }
+}

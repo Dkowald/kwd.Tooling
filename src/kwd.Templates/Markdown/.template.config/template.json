@@ -1,7 +1,7 @@
 {
   "$schema": "http://json.schemastore.org/template",
   "author": "Derek Kowald",
-  "classifications": [ "Text", "Markdown" ],
+  "classifications": ["kwd", "Text", "Markdown" ],
   "identity": "kwd.Templates.Markdown",
   "name": "Markdown text",
   "shortName": "md",

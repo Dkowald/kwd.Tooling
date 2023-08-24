@@ -14,7 +14,8 @@ and other types of SDK project-->
 
     <!--Additional repository files-->
 	<ItemGroup>
-    <None Include="**/*" Exclude="Repository.csproj;src/**/*" />
+    <None Include="**/*" Exclude="Repository.csproj;src/**/*;" />
+    <None Remove=".git/**/*" />
     <None Remove="bin/**/*;obj/**/*;.vs/**/*" />
   </ItemGroup>
 
