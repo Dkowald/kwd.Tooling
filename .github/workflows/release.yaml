@@ -1,6 +1,7 @@
 ﻿# Tag based release.
-# Build and publish to github.
+# Build on github.
 # Publish to nuget
+# Create github release.
 # Uses the provided tag as the version.
 #
 # Tag must start with v
@@ -110,6 +111,7 @@ jobs:
         git config --global user.email "derek@kowald.id.au"
 
     - name: Clone wiki
+      if: needs.check.outputs.is_preview == 'false'
       uses: actions/checkout@v3
       with:
        repository: '${{github.repository}}.wiki.git'
@@ -117,11 +119,13 @@ jobs:
        path: 'w'
 
     - name: Copy updated wiki files
+      if: needs.check.outputs.is_preview == 'false'
       run: |
        rm -r w/*
        cp -r wiki/* w/
 
     - name: Publish wiki files
+      if: needs.check.outputs.is_preview == 'false'
       run: |
        cd w
        git add -A
